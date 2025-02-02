@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown in HTML</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h2>Markdown Example</h2>
+    <div id="markdown-content"></div>
+    <script>
+        const markdownText = `
+# Hello world (Heading 1 = h1)
+## My Siwat kaewnongsang (Heading 2 = h2)
+### CSI204  (Heading 3 = h3)
+
+**ตัวอย่างการทำให้ตัวหนา (Bold)** 
+
+*ตัวอย่างการทำให้ตัวเอียง (Italic)*
+
+- รายการแบบไม่มีลำดับที่ 1
+- รายการแบบไม่มีลำดับที่ 2
+
+1. รายการแบบมีลำดับที่ 1
+2. รายการแบบมีลำดับที่ 2
+
+[ไปยัง Google](https://www.google.com)
+
+[ไปยัง Youtube](https://www.youtube.com/watch?v=rOU4yN_9KhE)
+
+
+        `;
+        document.getElementById("markdown-content").innerHTML = marked.parse(markdownText);
+    </script>
+</body>
+</html>
